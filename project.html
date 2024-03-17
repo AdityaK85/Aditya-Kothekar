@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects experienced</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Welcome to the portfolio of Aditya Ashok Kothekar, an experienced backend developer specializing in Django, Python, and AJAX. Explore completed projects, extensive experience, and API integrations. Thank you for visiting.">
+  <meta name="keywords" content="backend developer, Django, Python, AJAX, web development, live projects, API development, HTML, CSS, SASS, jQuery, developer portfolio, job candidate, experienced developer">
+  <meta name="author" content="Aditya Ashok Kothekar">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html{
+    background: black;
+}
+
+body{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vH;
+  background-color: black;
+  font-family: Roboto;
+}
+
+h1{
+  font-size: 40pt;
+  font-weight: 500;
+  color: #fff;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 410px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.item:hover{
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.item *{
+  transition: all 0.35s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 310px;
+}
+
+.item:hover img {
+  opacity: 0;
+}
+
+.text{
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  top: -100px;
+  left: 10%;
+  color: #fff;
+}
+
+.text h3{
+  color: #fff;
+}
+
+.item:hover .text{
+  top: 20%;
+}
+
+.item:hover .button{
+  bottom: 20%;
+}
+
+.item .button{
+  position: absolute;
+  bottom: -100px;
+  left: 25%;
+  width: 50%;
+  color: white;
+  border: 3px solid #0f33ff;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover{
+  background-color: #0f33ff;
+  color: #F5F5F5;
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #F5F5F5;
+  margin: 5% auto;
+  box-sizing: border-box;
+  width: 700px;
+  max-height: 714px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.scale{
+  animation: scale 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scale{
+  from{transform: scale(0);}
+  to{transform: scale(1);}
+}
+
+#img{
+  width: 100%;
+  height: 450px;
+}
+
+#details{
+  padding: 25px;
+  text-align: left;
+  position: relative;
+  height: 264px;
+  box-sizing: border-box;
+  border-top: 1px solid #363638;
+}
+
+#details *{
+  transition: all .3s;
+}
+
+#title{
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#details .button{
+  position: absolute;
+  width: 30%;
+  background-color: #01A2AC;
+  color: #F5F5F5;
+  text-align: center;
+  left: 25px;
+  bottom: 35px;
+  padding: 15px;
+}
+
+#details i{
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+  font-size: 3rem;
+  color: #01A2AC;
+}
+
+#details .button:hover,
+i:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #363638;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px white; }
+    50% { box-shadow: 0 0 20px #0f33ff; }
+    100% { box-shadow: 0 0 10px white; }
+  }
+
+  /* Button styles */
+  .glowing-button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: glow 1.5s infinite alternate;
+  }
+
+
+
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+#proj_image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#details {
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0f33ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0026ff;
+}
+
+.credentials {
+    text-align: left;
+}
+
+.credentials h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.credentials p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.credentials p span {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0f33ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0026ff;
+}
+
+.project-link i {
+  margin-right: 5px; /* Add spacing between icon and text */
+}
+
+</style>
+
+
+<body>
+
+
+    <section>
+        <h1>Work <strong style="color: #0f33ff;">Experience Highlights</strong> </h1>
+        <a href="/index.html" class="glowing-button"  >Back</a>
+    
+    
+        <div class="container" id="project_exp">
+            
+            <div class="item" id="1">
+                <img src="assets/img/khabar24.png" alt="">
+                <div class="text">
+                    <h3>Mykhabar24</h4>
+                        <p>Web App: News platform delivering reliable updates to users. </p>
+                </div>
+                <div class="button" onclick="window.open('https://mykhabar24.com/', '_blank')">Learn More</div>
+            </div>
+    
+            <div class="item" id="2">
+                <img src="assets/img/suluhu.png" alt="">
+                <div class="text">
+                    <h3>SULUHU</h4>
+                        <p>Mobile App: Developed APIs for seamless integration with backend services.</p>
+                </div>
+                <div class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="3">
+                <img src="assets/img/kago.png" alt="">
+                <div class="text">
+                    <h3>KagoConnect</h4>
+                        <p>Mobile App: Developed APIs for seamless integration with backend services.</p>
+                </div>
+                <div onclick="window.open('https://play.google.com/store/apps/details?id=com.app.kago&hl=en_IN&gl=US', '_blank')"
+                    class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="4">
+                <img src="assets/img/algorms.png" alt="">
+                <div class="text">
+                    <h3>Algo RMS</h4>
+                        <p>Web App: Algo trading platform for efficient risk management.</p>
+                </div>
+                <div class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="5">
+                <img src="assets/img/geniresearch.png" alt="">
+                <div class="text">
+                    <h3>GeniResearch</h4>
+                        <p>Web App: Trading Analysis Project: Analytical platform for comprehensive trading insights.</p>
+                </div>
+                <div onclick="window.open('https://www.geniresearch.com/', '_blank')" class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="6">
+                <img src="assets/img/algoedge.png" alt="">
+                <div class="text">
+                    <h3>AlgoEdge</h4>
+                        <p>Web App: Algo trading platform for efficient risk management.</p>
+                </div>
+                <div class="button">Learn More</div>
+            </div>
+
+            
+        </div>
+
+
+        <div>
+            <button class="glowing-button"  style="margin-top: 31px;" onclick="toggleProject()" >View Portfolio Project</button>
+        </div>
+
+
+        <div class="container"  id="project_portfolio" style="display: none;">
+
+            <div class="item" >
+                <img src="assets/img/bms.png" alt="">
+                <div class="text">
+                    <h3>Bakery Shop Admin</h4>
+                        <p>Web App: News platform delivering reliable updates to users. </p>
+                </div>
+                <div class="button" onclick="showProjectDetails('assets/img/bms.png', 'Bakery Shop Admin' , 'https://bakery-j451.onrender.com/', 'https://github.com/AdityaK85/Bakery' , 'admin' , 'admin123')" >Learn More</div>
+            </div>
+
+            <div class="item" id="8">
+                <img src="assets/img/ccms.png" alt="">
+                <div class="text">
+                    <h3>Shop Billing System</h4>
+                        <p>Web App: News platform delivering reliable updates to users. </p>
+                </div>
+                <div class="button"  onclick="showProjectDetails('assets/img/ccms.png', 'Shop Billing System' , 'https://ccms-20c9.onrender.com/Dashboard/', 'https://github.com/AdityaK85/CCMS' , 'admin' , 'admin123')" >Learn More</div>
+            </div>
+
+            <div class="item" id="8">
+                <img src="assets/img/tpms.png" alt="">
+                <div class="text">
+                    <h3>Toll Plaza System</h4>
+                        <p>Web App: News platform delivering reliable updates to users. </p>
+                </div>
+                <div class="button" onclick="showProjectDetails('assets/img/tpms.png', 'Toll Plaza System' , 'https://toll-plaza-system.onrender.com', 'https://github.com/AdityaK85/Toll-Plaza-System' , 'admin' , 'admin123')" >Learn More</div>
+            </div>
+
+            <div class="item" id="1">
+                <img src="assets/img/garage.png" alt="">
+                <div class="text">
+                    <h3>Garage Mangement</h4>
+                    <p>Web App: News platform delivering reliable updates to users. </p>
+                </div>
+                <div class="button" onclick="showProjectDetails('assets/img/garage.png', 'Garage Mangement' , 'https://garagesystempython.onrender.com/dashboard/', 'https://github.com/AdityaK85/Garage_management' , 'admin' , 'admin123')" >Learn More</div>
+            </div>
+    
+            <div class="item" id="2">
+                <img src="assets/img/ecommerce.png" alt="">
+                <div class="text">
+                    <h3>E-commerce</h4>
+                        <p>Mobile App: Developed APIs for seamless integration with backend services.</p>
+                </div>
+                <div class="button" onclick="showProjectDetails('assets/img/ecommerce.png', 'E-commerce' , 'https://welcome-to-aditya-portfolio-projects.onrender.com/', 'https://github.com/AdityaK85/e-commerce-system-In-Django' , 'adityakothekar79@gmail.com' , 'pass@123')" >Learn More</div>
+            </div>
+    
+            <div class="item" id="3">
+                <img src="assets/img/onlineadmissoin.png" alt="">
+                <div class="text">
+                    <h3>Online Admission Form</h4>
+                        <p>Mobile App: Developed APIs for seamless integration with backend services.</p>
+                </div>
+                <div onclick="showProjectDetails('assets/img/onlineadmissoin.png', 'Online Admission Form' , 'https://welcome-to-aditya-portfolio.onrender.com/', 'https://github.com/AdityaK85/Online-Admission-Using-Django' , 'adityakothekar79@gmail.com' , 'pass@123')"  class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="4">
+                <img src="assets/img/hospital.png" alt="">
+                <div class="text">
+                    <h3>Hospital Management</h4>
+                        <p>Web App: Algo trading platform for efficient risk management.</p>
+                </div>
+                <div onclick="showProjectDetails('assets/img/hospital.png', 'Hospital Management' , '#', 'https://github.com/AdityaK85/Online-Admission-Using-Django' , 'adityakothekar79@gmail.com' , 'pass@123')" class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="5">
+                <img src="assets/img/bus.png" alt="">
+                <div class="text">
+                    <h3>Bus Reservation</h4>
+                        <p>Web App: Trading Analysis Project: Analytical platform for comprehensive trading insights.</p>
+                </div>
+                <div onclick="showProjectDetails('assets/img/bus.png', 'Bus Reservation' , '#', 'https://github.com/AdityaK85/Bus-Rerevations-PHP' , 'user1' , 'pass')" class="button">Learn More</div>
+            </div>
+    
+            <div class="item" id="6">
+                <img src="assets/img/websocket.png" alt="">
+                <div class="text">
+                    <h3>Web socket</h4>
+                        <p>Web App: Algo trading platform for efficient risk management.</p>
+                </div>
+                <div onclick="showProjectDetails('assets/img/websocket.png', 'Web socket' , '#', 'https://github.com/AdityaK85/Django-web-socket' , 'user1' , 'pass')" class="button">Learn More</div>
+            </div>
+            <div class="item" id="7">
+                <img src="assets/img/restapi.png" alt="">
+                <div class="text">
+                    <h3>REST API</h4>
+                        <p>Web App: Algo trading platform for efficient risk management.</p>
+                </div>
+                <div onclick="showProjectDetails('assets/img/restapi.png', 'REST API' , '#', 'https://github.com/AdityaK85/Rest_API' , 'user1' , 'pass')" class="button">Learn More</div>
+            </div>
+        </div>
+
+    
+        <!-- Modal -->
+        <div id="preview" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="proj_image" src="" alt="Project Image">
+                <div id="details" style="display: flex; justify-content: space-between;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div style="flex-grow: 1;">
+                        <h3 id="title" style="text-align: justify;" >Project Title</h3>
+                        <div class="buttons" style="text-align: justify;" >
+                            <a href="#" id="live" class="project-link" target="_blank"><i class="fa-solid fa-link"></i> View Live Project</a>
+                            <a href="#" id="github" class="project-link" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="credentials" >
+                        <h4>Login Credentials</h4>
+                        <p><strong>Username:</strong> <span id="username"></span></p>
+                        <p><strong>Password:</strong> <span id="password"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+        
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+
+window.toggleProject = function(){
+    $("#project_portfolio").toggle()
+    location.href = '#project_portfolio'
+}
+
+// showProjectDetails('assets/img/bms.png', 'Bakery Shop Admin' , 'prject_link', 'github_link' , 'admin' , 'admin123')"
+
+window.showProjectDetails = function(image, title, project_link, github_link, username, password){
+    $('#proj_image').attr('src', image)
+    $('#live').attr('href', project_link)
+    $('#github').attr('href', github_link)
+    $('#title').html(title)
+    $('#username').html(username)
+    $('#password').html(password)
+    var modal = document.getElementById('preview');
+    modal.style.display = "block";
+    document.getElementsByClassName("modal-content")[0].classList.add("scale");
+}
+
+var modalInfo = {
+  1: {
+    title: "Project 1",
+    info: "...",
+    link: "#",
+    github: "#"
+  },
+  2: {
+    title: "Project 2",
+    info: "...",
+    link: "#",
+    github: "#"
+  },
+  3: {
+    title: "Project 3",
+    info: "...",
+    link: "#",
+    github: "#"
+  },
+  4: {
+    title: "Project 4",
+    info: "....",
+    link: "#",
+    github: "#"
+  },
+  5: {
+    title: "Project 5",
+    info: "...",
+    link: "#",
+    github: "#"
+  },
+  6: {
+    title: "Project 6",
+    info: "...",
+    link: "#",
+    github: "#"
+  }
+};
+
+// Get the modal
+var modal = document.getElementById('preview');
+
+// button that opens the modal
+var btn = document.getElementsByClassName("button");
+
+// <span> that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// open modal 
+for(let i = 0; i < btn.length; i++){
+  btn[i].addEventListener("click", function() {
+    var project = btn[i].parentElement;
+    openModal(project);
+  })
+};
+
+function openModal(project){
+  var id = project.id;
+  var img = project.getElementsByTagName("img")[0].src;
+  fillOut(id, img);
+  modal.style.display = "block";
+  document.getElementsByClassName("modal-content")[0].classList.add("scale");
+}
+
+function fillOut(id, img){
+  document.getElementById("title").innerHTML = modalInfo[id].title;
+  document.getElementById("info").innerHTML = modalInfo[id].info;
+  document.getElementById("img").src = img;
+  document.getElementById("live").onclick = function(){
+    window.open(modalInfo[id].link,'_blank');
+  }
+  document.getElementById("github").onclick = function(){
+    window.open(modalInfo[id].github,'_blank');
+  }
+}
+
+// close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+    </script>
+    
+</body>
+</html>
